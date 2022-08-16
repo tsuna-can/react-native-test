@@ -1,0 +1,42 @@
+---
+# specify correct parser
+parser: babel
+filepath: ''
+
+# main settings
+printWidth: 120
+tabWidth: 2
+useTabs: false
+semi: true
+singleQuote: true
+quoteProps: as-needed
+trailingComma: all
+bracketSpacing: true
+jsxBracketSameLine: false
+jsxSingleQuote: false
+arrowParens: avoid
+endOfLine: lf
+
+# process always
+requirePragma: false
+insertPragma: false
+
+overrides:
+  - files: '*.json'
+    options:
+      parser: json
+  - files:
+    - '*.md'
+    - '*.markdown'
+    options:
+      parser:markdown
+  - files:
+    - '*.tx'
+    - '*.tsx'
+    options:
+      parser: typescript
+  - files:
+    - '*.yml'
+    - '*.yaml'
+    options:
+      parser: yaml
